@@ -1201,3 +1201,7 @@ button, a { transition: var(--transition); }
   .footer-list:last-of-type { width: 33.33%; }
 
 }
+
+.explore-cars-page{
+  padding: 5% 0 5% 0;
+}
