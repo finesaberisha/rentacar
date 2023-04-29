@@ -14,91 +14,299 @@
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="./assets/css/style.css">
          
-    <!--<title>Login & Registration Form</title>-->
+    <!--<title> Login & Registration Form </title> -->
 </head>
-<body>
-    
+<header class="header" data-header>
     <div class="container">
-        <div class="forms">
-            <div class="form login">
-                <span class="title">Login</span>
 
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" placeholder="Enter your email" required>
-                        <i class="uil uil-envelope icon"></i>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" class="password" placeholder="Enter your password" required>
-                        <i class="uil uil-lock icon"></i>
-                        <i class="uil uil-eye-slash showHidePw"></i>
-                    </div>
+      <div class="overlay" data-overlay></div>
 
-                    <div class="checkbox-text">
-                        <div class="checkbox-content">
-                            <input type="checkbox" id="logCheck">
-                            <label for="logCheck" class="text">Remember me</label>
-                        </div>
-                        
-                        <a href="#" class="text">Forgot password?</a>
-                    </div>
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.svg" alt="Ridex logo">
+      </a>
 
-                    <div class="input-field button">
-                        <input type="button" value="Login">
-                    </div>
-                </form>
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
 
-                <div class="login-signup">
-                    <span class="text">Not a member?
-                        <a href="#" class="text signup-link">Signup Now</a>
-                    </span>
-                </div>
-            </div>
+          <li>
+            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
 
-            <!-- Registration Form -->
-            <div class="form signup">
-                <span class="title">Registration</span>
+          <li>
+            <a href="#featured-car" class="navbar-link" data-nav-link>Explore cars</a>
+          </li>
 
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" placeholder="Enter your name" required>
-                        <i class="uil uil-user"></i>
-                    </div>
-                    <div class="input-field">
-                        <input type="text" placeholder="Enter your email" required>
-                        <i class="uil uil-envelope icon"></i>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" class="password" placeholder="Create a password" required>
-                        <i class="uil uil-lock icon"></i>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" class="password" placeholder="Confirm a password" required>
-                        <i class="uil uil-lock icon"></i>
-                        <i class="uil uil-eye-slash showHidePw"></i>
-                    </div>
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>About us</a>
+          </li>
 
-                    <div class="checkbox-text">
-                        <div class="checkbox-content">
-                            <input type="checkbox" id="termCon">
-                            <label for="termCon" class="text">I accepted all terms and conditions</label>
-                        </div>
-                    </div>
+          <li>
+            <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+          </li>
 
-                    <div class="input-field button">
-                        <input type="button" value="Signup">
-                    </div>
-                </form>
+        </ul>
+      </nav>
 
-                <div class="login-signup">
-                    <span class="text">Already a member?
-                        <a href="#" class="text login-link">Login Now</a>
-                    </span>
-                </div>
-            </div>
+      <div class="header-actions">
+
+        <div class="header-contact">
+          <a href="tel:88002345678" class="contact-link">8 800 234 56 78</a>
+
+          <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
         </div>
-    </div>
 
-    <!--<script src="script.js"></script>-->
+        <a href="#featured-car" class="btn" aria-labelledby="aria-label-txt">
+          <ion-icon name="car-outline"></ion-icon>
+
+          <span id="aria-label-txt">Explore cars</span>
+        </a>
+
+        <a href="#" class="btn user-btn" aria-label="Profile">
+          <ion-icon name="person-outline"></ion-icon>
+        </a>
+
+        <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+       <body>
+<div class="register-page">
+    <div class="wrapper">
+        <div class="title-text">
+           <div class="title login">
+              Login Form
+           </div>
+           <div class="title signup">
+              Signup Form
+           </div>
+        </div>
+        <div class="form-container">
+           <div class="slide-controls">
+              <input type="radio" name="slide" id="login" checked>
+              <input type="radio" name="slide" id="signup">
+              <label for="login" class="slide login">Login</label>
+              <label for="signup" class="slide signup">Signup</label>
+              <div class="slider-tab"></div>
+           </div>
+           <div class="form-inner">
+              <form action="#" class="login">
+                 <div class="field">
+                    <input type="text" placeholder="Email Address" required>
+                 </div>
+                 <div class="field">
+                    <input type="password" placeholder="Password" required>
+                 </div>
+                 <div class="pass-link">
+                    <a href="#">Forgot password?</a>
+                 </div>
+                 <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Login">
+                 </div>
+                 <div class="signup-link">
+                    Not a member? <a href="">Signup now</a>
+                 </div>
+              </form>
+              <form action="#" class="signup">
+                 <div class="field">
+                    <input type="text" placeholder="Email Address" required>
+                 </div>
+                 <div class="field">
+                    <input type="password" placeholder="Password" required>
+                 </div>
+                 <div class="field">
+                    <input type="password" placeholder="Confirm password" required>
+                 </div>
+                 <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Signup">
+                 </div>
+              </form>
+           </div>
+        </div>
+     </div>
+</div>
+          <script>
+             const loginText = document.querySelector(".title-text .login");
+             const loginForm = document.querySelector("form.login");
+             const loginBtn = document.querySelector("label.login");
+             const signupBtn = document.querySelector("label.signup");
+             const signupLink = document.querySelector("form .signup-link a");
+             signupBtn.onclick = (()=>{
+               loginForm.style.marginLeft = "-50%";
+               loginText.style.marginLeft = "-50%";
+             });
+             loginBtn.onclick = (()=>{
+               loginForm.style.marginLeft = "0%";
+               loginText.style.marginLeft = "0%";
+             });
+             signupLink.onclick = (()=>{
+               signupBtn.click();
+               return false;
+             });
+          </script>
 </body>
+<footer class="footer">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" alt="Ridex logo">
+          </a>
+
+          <p class="footer-text">
+            Search for cheap rental cars in New York. With a diverse fleet of 19,000 vehicles, Waydex offers its
+            consumers an
+            attractive and fun selection.
+          </p>
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Company</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Pricing plans</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Our blog</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contacts</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Support</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Help center</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Ask a question</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & conditions</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Neighborhoods in New York</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Manhattan</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Central New York City</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Upper East Side</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Queens</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Theater District</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Midtown</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">SoHo</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Chelsea</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-skype"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <p class="copyright">
+          &copy; 2023. RITK All Rights Reserved
+        </p>
+
+      </div>
+
+    </div>
+</footer>
 </html>
