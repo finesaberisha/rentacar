@@ -1197,10 +1197,6 @@ button, a { transition: var(--transition); }
   align-content: center;
 }
 
-::selection{
-  background: #fa4299;
-  color: #fff;
-}
 .wrapper{
   overflow: hidden;
   max-width: 390px;
@@ -1361,4 +1357,14 @@ form .btn input[type="submit"]{
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
+}
+
+.services-section{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  gap: 30px;
+}
+
+.services-page{
+  padding: 7% 0 0 0 ;
 }
