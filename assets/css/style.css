@@ -1384,5 +1384,43 @@ form .btn input[type="submit"]{
   height: 100vh;
   width: 100%;
   padding: 90px 0;
-  background: #ddd;
+  max-width: 1130px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pic {
+  width: 50%;
+  margin-right: 40px;
+  border-radius: 30px;
+}
+
+.text {
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pic {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .text {
+    width: 100%;
+  }
 }
