@@ -27,19 +27,19 @@
         <ul class="navbar-list">
 
           <li>
-            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+            <a href="index.php" class="navbar-link" data-nav-link>Home</a>
           </li>
 
           <li>
-            <a href="explore.html" class="navbar-link" data-nav-link>Explore cars</a>
+            <a href="explore.php" class="navbar-link" data-nav-link>Explore cars</a>
           </li>
 
           <li>
-            <a href="aboutus.html" class="navbar-link" data-nav-link>About us</a>
+            <a href="aboutus.php" class="navbar-link" data-nav-link>About us</a>
           </li>
 
           <li>
-            <a href="services.html" class="navbar-link" data-nav-link>Services</a>
+            <a href="services.php" class="navbar-link" data-nav-link>Services</a>
           </li>
 
         </ul>

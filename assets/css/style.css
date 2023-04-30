@@ -686,7 +686,7 @@ button, a { transition: var(--transition); }
 
 .blog-card .card-content { padding: 20px; }
 
-.blog-card .card-title { margin-bottom: 20px; }
+.blog-card .card-title { margin-bottom: 0px; }
 
 .blog-card .card-title > a { color: inherit; }
 
