@@ -1445,3 +1445,16 @@ th {padding-top: 12px; padding-bottom: 12px; text-align: left; background-color:
   height: 440px;
   width: 280px;
 }
+
+.input-field-select{
+  position: relative;
+    background: var(--background, var(--alice-blue));
+    min-height: var(--height, 40px);
+    padding: 10px 25px;
+    border-radius: var(--radius-14);
+    border-color: var(--carolina-blue);
+    font-family: var(--ff-nunito);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-600);
+    border-width: 2px;
+}
