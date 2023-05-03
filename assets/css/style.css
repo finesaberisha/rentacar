@@ -1458,3 +1458,7 @@ th {padding-top: 12px; padding-bottom: 12px; text-align: left; background-color:
     font-weight: var(--fw-600);
     border-width: 2px;
 }
+
+.h3.section-title{
+  color: var(--carolina-blue);
+}
