@@ -46,7 +46,7 @@
 
           <div class="input-wrapper">
   <label for="input-1" class="input-label">Location</label>
-  <select name="location" id="input-1" class="input-field">
+  <select name="location" id="input-1" class="input-field-select">
     <option value="">Select a location</option>
     <option value="Peja">Peja</option>
     <option value="Prishtina">Prishtina</option>
