@@ -26,10 +26,10 @@
         <div class="text">
           <h1>About Us</h1>
           <h5>Rent A car <span>Company</span></h5>
-          <p>Rent a car company placed in Kosovo, Prishtina</p>
-          <div class="data">
-            <a href="#" class="hire">Hire Me</a>
-          </div>
+          <p>If you're planning a trip to Kosovo and need a reliable and affordable way to get around, look no further than our rent-a-car company. Based in the heart of Prishtina, we offer a wide range of vehicles to suit every need and budget, from compact cars to spacious SUVs and everything in between. But we don't just serve Prishtina - we also have branches in Gjakova, Peja, Prizren, Ferizaj, and Mitrovica, making it easy to rent a car no matter where you're headed. Whether you're in Kosovo for business or pleasure, renting a car is a great way to see everything the country has to offer at your own pace. So why wait?<a href="#" class="hire">Login</a> today to book your rental car and start exploring Kosovo on your own terms. We look forward to serving you!</p>
+          <!-- <div class="data">
+            <p><a href="#" class="hire">Login</a>today to book your rental car and start exploring Kosovo on your own terms. We look forward to serving you!</p>
+          </div> -->
         </div>
       </div>
     </section>
