@@ -44,11 +44,19 @@
 
           <form action="" class="hero-form">
 
-            <div class="input-wrapper">
-              <label for="input-1" class="input-label">Location</label>
+          <div class="input-wrapper">
+  <label for="input-1" class="input-label">Location</label>
+  <select name="location" id="input-1" class="input-field">
+    <option value="">Select a location</option>
+    <option value="Peja">Peja</option>
+    <option value="Prishtina">Prishtina</option>
+    <option value="Prizren">Prizren</option>
+    <option value="Ferizaj">Ferizaj</option>
+    <option value="Gjakova">Gjakova</option>
+    <option value="Mitrovica">Mitrovica</option>
+  </select>
+</div>
 
-              <input type="text" name="location" id="input-1" class="input-field" placeholder="Search Places">
-            </div>
 
             <div class="input-wrapper">
               <label for="input-2" class="input-label">Pick-up Date</label>
