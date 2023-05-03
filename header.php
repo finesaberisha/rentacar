@@ -19,7 +19,7 @@
 
       <div class="overlay" data-overlay></div>
 
-      <a href="index.html" class="logo">
+      <a href="index.php" class="logo">
         <img class="header-logo" src="./assets/images/RIT_Kosovo_PNG.png" alt="RITK logo">
       </a>
 
