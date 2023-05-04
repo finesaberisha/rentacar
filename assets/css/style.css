@@ -159,7 +159,7 @@ button, a { transition: var(--transition); }
   color: var(--color, var(--white));
   min-width: var(--width, 40px);
   min-height: var(--height, 40px);
-  padding: 5px;
+  padding: 5px 10px;
   display: grid;
   place-items: center;
   border-radius: var(--radius-14);
@@ -1481,5 +1481,11 @@ th {padding-top: 12px; padding-bottom: 12px; text-align: left; background-color:
   
   .about-us-2 .pic {
     max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .register-page {
+    padding: 25% 5% 10% 5%;
   }
 }
