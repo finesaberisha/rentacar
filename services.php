@@ -48,9 +48,8 @@ require 'header.php';
 
         <div class="card-content">
 
-          <h3 class="h3 card-title">
-            <a href="#">Opening of new offices of the company</a>
-          </h3>
+          <h3 class="h3 card-title"><a href="#">Wide selection of vehicles</a></h3>
+          <p> We have a diverse fleet of vehicles to choose from, including economy, mid-size, full-size, luxury, and SUVs. Whatever your needs are, we have a car to fit your budget and style.</p>
 
           <div class="card-meta">
 
@@ -76,8 +75,9 @@ require 'header.php';
         <div class="card-content">
 
           <h3 class="h3 card-title">
-            <a href="#">Opening of new offices of the company</a>
+            <a href="#">24/7 customer service</a>
           </h3>
+          <p>Our customer service team is available around the clock to answer any questions you have or help you with any issues that may arise during your rental period.</p>
 
           <div class="card-meta">
 
