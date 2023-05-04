@@ -322,13 +322,13 @@
                   <ion-icon name="person-add-outline"></ion-icon>
                 </div>
 
-                <h3 class="card-title">Create a profile</h3>
+                <h3 class="card-title">Choose your vehicle</h3>
 
                 <p class="card-text">
-                  If you are going to use a passage of Lorem Ipsum, you need to be sure.
+                Take a look at our inventory and choose the vehicle that best suits your needs and budget. We offer a wide range of options, from compact cars to luxury SUVs and everything in between.
                 </p>
 
-                <a href="#" class="card-link">Get started</a>
+                <!-- <a href="#" class="card-link">Get started</a> -->
 
               </div>
             </li>
@@ -340,10 +340,10 @@
                   <ion-icon name="car-outline"></ion-icon>
                 </div>
 
-                <h3 class="card-title">Tell us what car you want</h3>
+                <h3 class="card-title">Log in to your account</h3>
 
                 <p class="card-text">
-                  Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                If you don't already have an account with us, you can easily create one on our website. Once you're logged in, you can select the dates and times you want to rent the car.
                 </p>
 
               </div>
@@ -356,11 +356,10 @@
                   <ion-icon name="person-outline"></ion-icon>
                 </div>
 
-                <h3 class="card-title">Match with seller</h3>
+                <h3 class="card-title">Pick up your car</h3>
 
                 <p class="card-text">
-                  It to make a type specimen book. It has survived not only five centuries, but also the leap into
-                  electronic
+                On the day of your rental, come to our rental location to pick up your car. Be sure to bring your driver's license and credit card, as well as any additional documentation we may require.
                 </p>
 
               </div>
@@ -373,11 +372,11 @@
                   <ion-icon name="card-outline"></ion-icon>
                 </div>
 
-                <h3 class="card-title">Make a deal</h3>
+                <h3 class="card-title">Return your car</h3>
 
                 <p class="card-text">
-                  There are many variations of passages of Lorem available, but the majority have suffered alteration
-                </p>
+                After your rental period ends, please return the car to our rental location with a full gas tank and in the same condition you received it. Our staff will inspect the car and close out your agreement.                
+              </p>
 
               </div>
             </li>
