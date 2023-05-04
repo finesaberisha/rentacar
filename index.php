@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fiona - Rent your favourite car</title>
+  <title>Rent a Kerr</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +36,7 @@
             <h2 class="h1 hero-title">Discover the Freedom of the Open Roads</h2>
 
             <p class="hero-text">
-              With Erza's Premium Rental Cars
+            Whether you're planning a road trip, need a ride to the airport <br>or simply want to explore your local area, <br>our rent a car company has got you covered.
             </p>
           </div>
 

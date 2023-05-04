@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fiona - Rent your favourite car</title>
+  <title>Rent a Car</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,11 +31,7 @@
           </li>
 
           <li>
-            <a href="explore.php" class="navbar-link" data-nav-link>Explore cars</a>
-          </li>
-
-          <li>
-            <a href="aboutus.php" class="navbar-link" data-nav-link>About us</a>
+            <a href="about.php" class="navbar-link" data-nav-link>About us</a>
           </li>
 
           <li>
@@ -47,13 +43,13 @@
 
       <div class="header-actions">
 
-        <a href="#featured-car" class="btn" aria-labelledby="aria-label-txt">
+        <a href="explore.php" class="btn" aria-labelledby="aria-label-txt">
           <i class="fa fa-car"></i>
 
           <span id="aria-label-txt">Explore cars</span>
         </a>
 
-        <a href="#" class="btn user-btn" aria-label="Profile">
+        <a href="register.php" class="btn user-btn" aria-label="Profile">
           <i class="fa fa-user"></i>
         </a>
 
