@@ -13,8 +13,9 @@ if($result = mysqli_query($link, $sql)) {
             $year = $row['year'];
             $image_url = $row['image_url'];
             $price = $row['price_per_day'];
+            $type= $row['type'];
             
-            carRender($name, $year, $image_url, $price);
+            carRender($name, $year, $image_url, $price,$type);
         }
     } else {
         echo "No records matching your query were found.";
@@ -29,7 +30,7 @@ mysqli_close($link);
 
 
 
-function carRender($car_name, $year, $image_url, $price)
+function carRender($car_name, $year, $image_url, $price, $type)
 {
     echo '<li>
         <div class="featured-car-card">
@@ -53,7 +54,7 @@ function carRender($car_name, $year, $image_url, $price)
               <li class="card-list-item">
                 <ion-icon name="people-outline"></ion-icon>
 
-                <span class="card-item-text">4 People</span>
+                <span class="card-item-text">'.$type.'</span>
               </li>
 
               <li class="card-list-item">

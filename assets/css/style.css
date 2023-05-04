@@ -159,7 +159,7 @@ button, a { transition: var(--transition); }
   color: var(--color, var(--white));
   min-width: var(--width, 40px);
   min-height: var(--height, 40px);
-  padding: 5px;
+  padding: 5px 10px;
   display: grid;
   place-items: center;
   border-radius: var(--radius-14);
@@ -1444,4 +1444,48 @@ th {padding-top: 12px; padding-bottom: 12px; text-align: left; background-color:
 #newCar {
   height: 440px;
   width: 280px;
+}
+
+.input-field-select{
+  position: relative;
+    background: var(--background, var(--alice-blue));
+    min-height: var(--height, 40px);
+    padding: 10px 25px;
+    border-radius: var(--radius-14);
+    border-color: var(--carolina-blue);
+    font-family: var(--ff-nunito);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-600);
+    border-width: 2px;
+}
+
+.h3.section-title{
+  color: var(--carolina-blue);
+}
+
+.about-us-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.about-us-2 .pic {
+  width: 100%;
+  max-width: 500px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-us-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-us-2 .pic {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .register-page {
+    padding: 25% 5% 10% 5%;
+  }
 }

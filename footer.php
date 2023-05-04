@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fiona - Rent your favourite car</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
-    rel="stylesheet">
-</head>
+<html>
 <body>
 <footer class="footer">
     <div class="container">
@@ -20,7 +6,7 @@
       <div class="footer-top">
 
         <div class="footer-brand">
-          <a href="#" class="logo">
+          <a href="index.php" class="logo">
             <img class="header-logo" src="./assets/images/RIT_Kosovo_PNG.png" alt="RITK logo">
 
           </a>
@@ -36,19 +22,19 @@
           </li>
 
           <li>
-            <a href="index.html" class="footer-link">Home</a>
+            <a href="index.php" class="footer-link">Home</a>
           </li>
 
           <li>
-            <a href="explore.html" class="footer-link">Explore Cars</a>
+            <a href="explore.php" class="footer-link">Explore Cars</a>
           </li>
 
           <li>
-            <a href="aboutus.html" class="footer-link">About us</a>
+            <a href="aboutus.php" class="footer-link">About us</a>
           </li>
 
           <li>
-            <a href="services.html" class="footer-link">Serices</a>
+            <a href="services.php" class="footer-link">Services</a>
           </li>
 
         </ul>
@@ -60,11 +46,11 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">FAQ</a>
+            <a href="faq.php" class="footer-link">FAQ</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Terms & conditions</a>
+            <a href="terms.php" class="footer-link">Terms & conditions</a>
           </li>
 
         </ul>
@@ -129,7 +115,7 @@
         </ul>
 
         <p class="copyright">
-          &copy; 2023. RITK All Rights Reserved
+          &copy; 2023 RITK All Rights Reserved
         </p>
 
       </div>

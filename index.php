@@ -1,19 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fiona - Rent your favourite car</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
-    rel="stylesheet">
-</head>
-
 <body>
   <?php
   require 'header.php';
@@ -36,7 +20,7 @@
             <h2 class="h1 hero-title">Discover the Freedom of the Open Roads</h2>
 
             <p class="hero-text">
-              With Erza's Premium Rental Cars
+            Whether you're planning a road trip, need a ride to the airport <br>or simply want to explore your local area, <br>our rent a car company has got you covered.
             </p>
           </div>
 
@@ -46,7 +30,7 @@
 
           <div class="input-wrapper">
   <label for="input-1" class="input-label">Location</label>
-  <select name="location" id="input-1" class="input-field">
+  <select name="location" id="input-1" class="input-field-select">
     <option value="">Select a location</option>
     <option value="Peja">Peja</option>
     <option value="Prishtina">Prishtina</option>
@@ -322,13 +306,13 @@
                   <ion-icon name="person-add-outline"></ion-icon>
                 </div>
 
-                <h3 class="card-title">Create a profile</h3>
+                <h3 class="card-title">Choose your vehicle</h3>
 
                 <p class="card-text">
-                  If you are going to use a passage of Lorem Ipsum, you need to be sure.
+                Take a look at our inventory and choose the vehicle that best suits your needs and budget. We offer a wide range of options, from compact cars to luxury SUVs and everything in between.
                 </p>
 
-                <a href="#" class="card-link">Get started</a>
+                <!-- <a href="#" class="card-link">Get started</a> -->
 
               </div>
             </li>
@@ -340,10 +324,10 @@
                   <ion-icon name="car-outline"></ion-icon>
                 </div>
 
-                <h3 class="card-title">Tell us what car you want</h3>
+                <h3 class="card-title">Log in to your account</h3>
 
                 <p class="card-text">
-                  Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                If you don't already have an account with us, you can easily create one on our website. Once you're logged in, you can select the dates and times you want to rent the car.
                 </p>
 
               </div>
@@ -356,11 +340,10 @@
                   <ion-icon name="person-outline"></ion-icon>
                 </div>
 
-                <h3 class="card-title">Match with seller</h3>
+                <h3 class="card-title">Pick up your car</h3>
 
                 <p class="card-text">
-                  It to make a type specimen book. It has survived not only five centuries, but also the leap into
-                  electronic
+                On the day of your rental, come to our rental location to pick up your car. Be sure to bring your driver's license and credit card, as well as any additional documentation we may require.
                 </p>
 
               </div>
@@ -373,11 +356,11 @@
                   <ion-icon name="card-outline"></ion-icon>
                 </div>
 
-                <h3 class="card-title">Make a deal</h3>
+                <h3 class="card-title">Return your car</h3>
 
                 <p class="card-text">
-                  There are many variations of passages of Lorem available, but the majority have suffered alteration
-                </p>
+                After your rental period ends, please return the car to our rental location with a full gas tank and in the same condition you received it. Our staff will inspect the car and close out your agreement.                
+              </p>
 
               </div>
             </li>
