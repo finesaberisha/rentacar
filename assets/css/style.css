@@ -1435,6 +1435,10 @@ form .btn input[type="submit"]{
   margin-top: 30px;
 }
 
+#admin-menu li{
+  display: inline;
+}
+
 table {border-collapse: collapse; width: 100%; margin:auto;}
 td, th { border: 1px solid #ddd; padding: 8px;}
 tr:nth-child(even) {background-color: #f2f2f2;}
@@ -1442,8 +1446,12 @@ tr:hover {background-color: #ddd;}
 th {padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #04AA6D; color:white;}
 
 #newCar {
-  height: 440px;
+  height: 480px;
   width: 280px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .input-field-select{

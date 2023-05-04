@@ -5,6 +5,21 @@
   ?>
 
 <body>
+<?php
+    session_start();
+    if(isset($_SESSION['username'])) {
+      if($_SESSION['role'] != 'staff') {
+        header("Location: ./user.php");
+        die();
+      }
+      else {
+        header("Location: ./admin.php");
+        die();
+      }
+        
+    }
+    
+    ?>
   <div class="register-page">
     <div class="wrapper">
       <div class="title-text">

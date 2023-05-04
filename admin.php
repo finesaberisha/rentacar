@@ -20,16 +20,26 @@
   <?php
   require 'header.php';
   ?>
-
-    <div class="admin-menu">
-        <ul>
+    
+    <?php
+    session_start();
+    if(isset($_SESSION['username']) && $_SESSION['role'] != 'staff') {
+        header("Location: ./user.php");
+        die();
+    }
+    if(!isset($_SESSION['username'])) {
+        header("Location: ./register.php");
+        die();
+    }
+    ?>
+    
+    <div class="admin-main">
+    <ul id="admin-menu">
             <li><a href="#">Vehicles</a></li>
             <li><a href="#">Bookings</a></li>
-        </ul> 
-    </div>
-    <div class="admin-main">
-    <h2> Vehicles: </h2>
+    </ul> 
     <button onClick="showDialogForInsert()">Add new</button>
+    <h2> Vehicles: </h2>
 
     <dialog id="newCar">
     <?php 

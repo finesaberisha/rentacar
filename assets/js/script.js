@@ -46,3 +46,37 @@ function validateForm() {
     return false;
   }
 }
+
+
+//admin
+
+function showDialogForInsert() {
+ // document.getElementById("formAdd").reset(); //clear input fields 
+  newCar.showModal(); //show the dialog
+}
+
+function showDialogForDelete(id) {
+  deleteCar.showModal();
+  var textId = document.querySelector('input[name="idToDelete"]');
+  textId.value = id;
+}
+
+function showDialogForEdit(id) {
+  newCar.showModal();
+  var selectedCar = phpResult.find(x=>x.vehicle_id == id); 
+  var textId = document.querySelector('input[name="id"]');
+  var textType = document.querySelector('input[name="type"]');
+  var textBrand = document.querySelector('input[name="brand"]');
+  var textModel = document.querySelector('input[name="model"]');
+  var textYear = document.querySelector('input[name="year"]');
+  var textPrice = document.querySelector('input[name="price"]');
+
+  //fill input fields with data from the row
+  textId.value = selectedCar.vehicle_id;
+  textType.value = selectedCar.type;
+  textBrand.value = selectedCar.brand;
+  textModel.value = selectedCar.model;
+  textYear.value = selectedCar.year;
+  textPrice.value = selectedCar.price_per_day;
+
+}
