@@ -20,7 +20,7 @@
       <div class="footer-top">
 
         <div class="footer-brand">
-          <a href="#" class="logo">
+          <a href="index.php" class="logo">
             <img class="header-logo" src="./assets/images/RIT_Kosovo_PNG.png" alt="RITK logo">
 
           </a>
@@ -36,19 +36,19 @@
           </li>
 
           <li>
-            <a href="index.html" class="footer-link">Home</a>
+            <a href="index.php" class="footer-link">Home</a>
           </li>
 
           <li>
-            <a href="explore.html" class="footer-link">Explore Cars</a>
+            <a href="explore.php" class="footer-link">Explore Cars</a>
           </li>
 
           <li>
-            <a href="aboutus.html" class="footer-link">About us</a>
+            <a href="aboutus.php" class="footer-link">About us</a>
           </li>
 
           <li>
-            <a href="services.html" class="footer-link">Serices</a>
+            <a href="services.php" class="footer-link">Services</a>
           </li>
 
         </ul>
@@ -60,11 +60,11 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">FAQ</a>
+            <a href="faq.php" class="footer-link">FAQ</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Terms & conditions</a>
+            <a href="terms.php" class="footer-link">Terms & conditions</a>
           </li>
 
         </ul>
@@ -129,7 +129,7 @@
         </ul>
 
         <p class="copyright">
-          &copy; 2023. RITK All Rights Reserved
+          &copy; 2023 RITK All Rights Reserved
         </p>
 
       </div>
