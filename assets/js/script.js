@@ -64,18 +64,24 @@ function showDialogForDelete(id) {
 function showDialogForEdit(id) {
   newCar.showModal();
   var selectedCar = phpResult.find(x=>x.vehicle_id == id); 
+  var textLocation = document.querySelector('select[name="location"]');
   var textId = document.querySelector('input[name="id"]');
   var textType = document.querySelector('input[name="type"]');
   var textBrand = document.querySelector('input[name="brand"]');
   var textModel = document.querySelector('input[name="model"]');
+  var textEngine = document.querySelector('input[name="engine"]');
+  var textTransmission = document.querySelector('input[name="transmission"]');
   var textYear = document.querySelector('input[name="year"]');
   var textPrice = document.querySelector('input[name="price"]');
 
   //fill input fields with data from the row
+  textLocation.value = selectedCar.location;
   textId.value = selectedCar.vehicle_id;
   textType.value = selectedCar.type;
   textBrand.value = selectedCar.brand;
   textModel.value = selectedCar.model;
+  textEngine.value = selectedCar.engine;
+  textTransmission.value = selectedCar.transmission;
   textYear.value = selectedCar.year;
   textPrice.value = selectedCar.price_per_day;
 
@@ -83,6 +89,17 @@ function showDialogForEdit(id) {
 
 //make a booking
 function addToBookings(id, price) {
+  if (typeof bookData === 'undefined' || bookData === null) {
+    alert("Please login (if you haven't so) and perform a search by filling all fields first!");
+    return;
+  }
+  if (bookData[3] == '') {
+    alert("Please login or create an account first!");
+    return;
+  }
+
+
+
   //show dialog
   addToBookingsDialog.showModal();
 

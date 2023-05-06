@@ -21,8 +21,11 @@
             $location = $_POST["location"];
             $start_date = $_POST["start_date"];
             $end_date = $_POST["end_date"];
-
-            $result = array($location, $start_date, $end_date);
+            $username = '';
+            if (isset($_SESSION["username"])) {
+              $username = $_SESSION["username"];
+            }
+            $result = array($location, $start_date, $end_date, $username);
             $jsonResult = json_encode($result); //converting the array to json format
             echo "<script>var bookData = " . $jsonResult . ";</script>"; //storing that array in json format in a javascript variable
           }

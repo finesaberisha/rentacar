@@ -42,14 +42,14 @@
     <form id="formAdd" method="POST" action="" enctype="multipart/form-data">
 
         <input type="hidden" name="vehicle_id">
-        <label for="start_date">Pick-up Date:</label>
-        <input type="date" name="start_date" required>
+        <label for="start_date">Selected Pick-up Date:</label>
+        <input type="date" name="start_date" >
 
-        <label for="end_date">Return Date:</label>
-        <input type="date" name="end_date" required>
+        <label for="end_date">Selected Return Date:</label>
+        <input type="date" name="end_date" >
 
-        <label for="price">Price:</label>
-        <input type="decimal" name="price" required>
+        <label for="price">Total Price:</label>
+        <input type="decimal" name="price">
 
 
         <input type="submit" value="Submit">
@@ -78,6 +78,7 @@
 
         if(mysqli_query($link, $sql)) {
          //   echo "Records inserted successfully.";
+            echo "<script>window.location.href = './user.php';</script>";
         } else {
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
         }

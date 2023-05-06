@@ -23,9 +23,12 @@ if($result = mysqli_query($link, $sql)) {
             $image_url = $row['image_url'];
             $price = $row['price_per_day'];
             $type = $row['type'];
+            $engine = $row['engine'];
+            $transmission = $row['transmission'];
+            $location = $row['location'];
 
             
-            carRender($id, $name, $year, $image_url, $price, $type);
+            carRender($id, $name, $year, $image_url, $price, $type, $engine, $transmission, $location);
         }
     } else {
         echo "No records matching your query were found.";
@@ -37,10 +40,12 @@ if($result = mysqli_query($link, $sql)) {
 mysqli_close($link);
 
 
+echo '<script src="./assets/js/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>';
 
 
-
-function carRender($id, $car_name, $year, $image_url, $price, $type)
+function carRender($id, $car_name, $year, $image_url, $price, $type, $engine, $transmission, $location)
 {
     echo '<li>
         <div class="featured-car-card">
@@ -70,19 +75,19 @@ function carRender($id, $car_name, $year, $image_url, $price, $type)
               <li class="card-list-item">
                 <ion-icon name="flash-outline"></ion-icon>
 
-                <span class="card-item-text">Hybrid</span>
+                <span class="card-item-text">'.$engine.'</span>
               </li>
 
               <li class="card-list-item">
-                <ion-icon name="speedometer-outline"></ion-icon>
+                <ion-icon name="location-outline"></ion-icon>
 
-                <span class="card-item-text">6.1km / 1-litre</span>
+                <span class="card-item-text">'.$location.'</span>
               </li>
 
               <li class="card-list-item">
                 <ion-icon name="hardware-chip-outline"></ion-icon>
 
-                <span class="card-item-text">Automatic</span>
+                <span class="card-item-text">'.$transmission.'</span>
               </li>
 
             </ul>

@@ -80,6 +80,7 @@
 
         
         if(mysqli_query($link, $sql)) {
+            echo "<meta http-equiv='refresh' content='0'>";
          //   echo "Records inserted successfully.";
         } else {
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);

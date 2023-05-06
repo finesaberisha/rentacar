@@ -28,6 +28,7 @@
         // Attempt insert query execution
         $sql = "DELETE FROM bookings where booking_id=$id";
         if(mysqli_query($link, $sql)) {
+            echo "<meta http-equiv='refresh' content='0'>";
     //        echo "$alias deleted successfully.";
         } else {
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);

@@ -48,10 +48,8 @@
 
     <?php
     if(isset($_POST["UseridToDelete"])){
-        echo "<script> console.log('passed') </script>";
         $id=$_POST["UseridToDelete"];
 
-        echo "<script> console.log('passed $id') </script>";
         /* Attempt MySQL server connection. Assuming you are running MySQL
         server with default setting (user 'root' with no password) */
         $link = mysqli_connect("localhost", "root", "", "rentacar");
@@ -59,7 +57,6 @@
         // Check connection
         if($link === false) {
             die("ERROR: Could not connect. " . mysqli_connect_error());
-            echo "<script> console.log('failed') </script>";
         }
 
         // Delete bookings associated with the user
@@ -70,10 +67,9 @@
         $sql = "DELETE FROM users where user_id=$id";
 
         if(mysqli_query($link, $sql)) {
-            echo "<script> console.log('passed') </script>";
+            echo "<meta http-equiv='refresh' content='0'>";
     //        echo "$alias deleted successfully.";
         } else {
-            echo "<script> console.log('failed') </script>";
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
         }
         // Close connection
