@@ -121,3 +121,13 @@ function showEditDialogForBookings(id) {
   manageTotalPrice.value = selectedBooking.total_price;
 
 }
+function showDeleteDialogForBookings(id) {
+  deleteBooking.showModal();
+  var textId = document.querySelector('input[name="idToDelete"]');
+  textId.value = id;
+}
+function showDeleteDialogForUsers(id) {
+  deleteUsers.showModal();
+  var textId = document.querySelector('input[name="idToDelete"]');
+  textId.value = id;
+}

@@ -24,7 +24,7 @@ if($result = mysqli_query($link, $sql)) {
             echo "<td>" . $row['start_date'] . "</td>";
             echo "<td>" . $row['end_date'] . "</td>";
             echo "<td>" . $row['total_price'] . "</td>";
-            echo "<td><button onclick='showEditDialogForBookings(\"" . $row['booking_id'] . "\")'>Edit</button><button onclick=''>delete</button></td>";
+            echo "<td><button onclick='showEditDialogForBookings(\"" . $row['booking_id'] . "\")'>Edit</button><button onclick='showDeleteDialogForBookings(\"" . $row['booking_id'] . "\")'>delete</button></td>";
             echo "</tr>";
         }
         $jsonResult = json_encode($resultArray); //converting the array to json format

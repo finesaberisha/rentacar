@@ -22,11 +22,11 @@ if($result = mysqli_query($link, $sql)) {
             echo "<td>" . $row['username'] . "</td>";
             echo "<td>" . $row['email'] . "</td>";
             echo "<td>" . $row['role'] . "</td>";
-            echo "<td><button onclick=''>delete</button></td>";
+            echo "<td><button onclick='showDeleteDialogForUsers(\"" . $row['booking_id'] . "\")'>delete</button></td>";
             echo "</tr>";
         }
         $jsonResult = json_encode($resultArray); //converting the array to json format
-        echo "<script>var phpResult = " . $jsonResult . ";</script>"; //storing that array in json format in a javascript variable
+        echo "<script>var manageUsersResult = " . $jsonResult . ";</script>"; //storing that array in json format in a javascript variable
         echo "</table>";
     } else {
         echo "No records were found.";
