@@ -4,16 +4,18 @@
 require 'header.php';
 ?>
   <?php
-    session_start();
-    //if a staff user is logged in send him to the admin dashboard
+    session_start(); // starting the session 
+    // if a staff user is logged in send him to the admin dashboard
     if(isset($_SESSION['username']) && $_SESSION['role'] == 'staff') {
         header("Location: ./admin.php");
         die();
     }
+    // if user is not logged in and tries to access user panel, it redirects to the login page
     if(!isset($_SESSION['username'])) {
         header("Location: ./register.php");
         die();
     }
+    // if button logout is clicked, session is destroyed and it redirects to the login page
     if(isset($_POST['logout'])) {
         session_destroy();
         header("Location: ./register.php");

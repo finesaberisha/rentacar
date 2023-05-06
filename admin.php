@@ -5,15 +5,19 @@
   ?>
     
     <?php
-    session_start();
+    session_start(); //starting the session
+
+    // if the role of the user logged in is not staff redirect to the user panel
     if(isset($_SESSION['username']) && $_SESSION['role'] != 'staff') {
         header("Location: ./user.php");
         die();
     }
+    // if user is not logged in and tries to access admin panel, it redirects to the login page
     if(!isset($_SESSION['username'])) {
         header("Location: ./register.php");
         die();
     }
+    // if button logout is clicked, session is destroyed and it redirects to the login page
     if(isset($_POST['logout'])) {
         session_destroy();
         header("Location: ./register.php");

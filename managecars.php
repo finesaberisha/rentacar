@@ -17,20 +17,24 @@
 </head>
 
 <body>
+    <!-- header -->
   <?php
   require 'header.php';
   ?>
     
     <?php
-    session_start();
+    session_start(); //starting the session 
+    // if the role of the user logged in is not staff redirect to the user panel
     if(isset($_SESSION['username']) && $_SESSION['role'] != 'staff') {
         header("Location: ./user.php");
         die();
     }
+    // if user is not logged in and tries to access manage cars page, it redirects to the login page
     if(!isset($_SESSION['username'])) {
         header("Location: ./register.php");
         die();
     }
+    // if button logout is clicked, session is destroyed and it redirects to the login page
     if(isset($_POST['logout'])) {
         session_destroy();
         header("Location: ./register.php");
@@ -52,18 +56,21 @@
     <button onClick="showDialogForInsert()" style="float: right; font-weight: bold; color: green;">+ Add new</button>
     <h2> Vehicles: </h2>
 
+     <!-- a dialog that is shown when Add new is clicked -->
     <dialog id="newCar">
     <?php 
        include("./processes/admin/addcar.php");
     ?>
     </dialog>
 
+     <!-- a dialog that is shown when delete is clicked -->
     <dialog id="deleteCar">
     <?php 
        include("./processes/admin/deletecar.php");
     ?>
     </dialog>
 
+    <!-- the table that displays all cars  -->
     <?php 
         include("./processes/admin/allcars.php");
     ?>
@@ -72,11 +79,12 @@
     </div>
       </section>
   </main>
-  
+  <!-- footer -->
   <?php
   require 'footer.php';
   ?>
   
+    <!-- our JS script -->
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

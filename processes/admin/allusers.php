@@ -1,8 +1,6 @@
 <?php
 
-// session_start();
-// $username = $_SESSION["username"];
-
+// connecting to our database
 $link = mysqli_connect("localhost", "root", "", "rentacar");
 // Check connection
 if($link === false) {
@@ -11,11 +9,11 @@ if($link === false) {
 // Attempt select query execution
 $sql = "SELECT * from users";
 if($result = mysqli_query($link, $sql)) {
+// if the number of rows is bigger than 0 it means there is data se we continue with what we want to do with that data
     if(mysqli_num_rows($result) > 0) {
         echo "<table>";
         echo "<tr><th>User_id</th><th>Username</th><th>Email</th><th>Role</th><th style='text-align: center;'>#</th></tr>";
         while($row = mysqli_fetch_array($result)) {
-            $resultArray[] = $row;
             echo "<tr>";
             echo "<td>" . $row['user_id'] . "</td>";
             echo "<td>" . $row['username'] . "</td>";

@@ -1,14 +1,19 @@
 <?php
+
+// connecting to our database
 $link = mysqli_connect("localhost", "root", "", "rentacar");
-// Check connection
+// Check connection, if false we stop the proccess and print the error message
 if($link === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
+// Retrieving data for only 3 cars for the home page
 $sql = "SELECT * FROM vehicles LIMIT 3";
 
-
+// if query is excecuted successfully
 if($result = mysqli_query($link, $sql)) {
+
+  // if the number of rows is bigger than 0 it means there is data se we continue with what we want to do with that data
     if(mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_array($result)) {
             $id = $row['vehicle_id'];
@@ -17,9 +22,12 @@ if($result = mysqli_query($link, $sql)) {
             $image_url = $row['image_url'];
             $price = $row['price_per_day'];
             $type = $row['type'];
+            $engine = $row['engine'];
+            $transmission = $row['transmission'];
+            $location = $row['location'];
 
-            
-            carRender($id, $name, $year, $image_url, $price, $type);
+            // calling our function with needed parameters that renders our data in HTML
+            carRender($id, $name, $year, $image_url, $price, $type, $engine, $transmission, $location);
         }
     } else {
         echo "No records matching your query were found.";
@@ -34,7 +42,7 @@ mysqli_close($link);
 
 
 
-function carRender($id, $car_name, $year, $image_url, $price, $type)
+function carRender($id, $car_name, $year, $image_url, $price, $type, $engine, $transmission, $location)
 {
     echo '<li>
         <div class="featured-car-card">
@@ -64,19 +72,19 @@ function carRender($id, $car_name, $year, $image_url, $price, $type)
               <li class="card-list-item">
                 <ion-icon name="flash-outline"></ion-icon>
 
-                <span class="card-item-text">Hybrid</span>
+                <span class="card-item-text">'.$engine.'</span>
               </li>
 
               <li class="card-list-item">
-                <ion-icon name="speedometer-outline"></ion-icon>
+                <ion-icon name="location-outline"></ion-icon>
 
-                <span class="card-item-text">6.1km / 1-litre</span>
+                <span class="card-item-text">'.$location.'</span>
               </li>
 
               <li class="card-list-item">
                 <ion-icon name="hardware-chip-outline"></ion-icon>
 
-                <span class="card-item-text">Automatic</span>
+                <span class="card-item-text">'.$transmission.'</span>
               </li>
 
             </ul>

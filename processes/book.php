@@ -57,27 +57,31 @@
 
 
     <?php
+    // if not logged in, redirect to register.php to login or sign up
     if(!isset($_SESSION['username'])) {
         header("Location: ./register.php");
         die();
     }
+    // only go further if vehicle_id, start_date and end_date are filled
     if (isset($_POST["vehicle_id"]) && isset($_POST["start_date"]) && isset($_POST["end_date"])) {
         $vehicle_id = $_POST["vehicle_id"];
         $start_date=$_POST["start_date"];
         $end_date=$_POST["end_date"];
         $price = $_POST["price"];
-                /* Attempt MySQL server connection. Assuming you are running MySQL
-        server with default setting (user 'root' with no password) */
+
+        // connecting to our database   
         $link = mysqli_connect("localhost", "root", "", "rentacar");
         // Check connection
         if($link === false) {
             die("ERROR: Could not connect. " . mysqli_connect_error());
         }
         $user_id = $_SESSION["user_id"];
+
+        // send the booking to the database for user that is logged in
         $sql = "INSERT INTO bookings(user_id, vehicle_id, start_date, end_date, total_price) VALUES($user_id, $vehicle_id, '$start_date', '$end_date', $price)";
 
         if(mysqli_query($link, $sql)) {
-         //   echo "Records inserted successfully.";
+         //  if query is excecuted successfully send to user panel
             echo "<script>window.location.href = './user.php';</script>";
         } else {
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);

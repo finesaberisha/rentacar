@@ -47,11 +47,11 @@
     </form>
 
     <?php
+    // only going through if UseridToDelete is submitted
     if(isset($_POST["UseridToDelete"])){
         $id=$_POST["UseridToDelete"];
 
-        /* Attempt MySQL server connection. Assuming you are running MySQL
-        server with default setting (user 'root' with no password) */
+        // connecting to our database
         $link = mysqli_connect("localhost", "root", "", "rentacar");
 
         // Check connection
@@ -59,7 +59,8 @@
             die("ERROR: Could not connect. " . mysqli_connect_error());
         }
 
-        // Delete bookings associated with the user
+        // Delete bookings associated with the user, because this user_id is a foreign key in bookings table, 
+        // so we delete bookings associated with this user to not cause potential problems
         $sql = "DELETE FROM bookings WHERE user_id=$id";
         mysqli_query($link, $sql);
 
@@ -67,8 +68,8 @@
         $sql = "DELETE FROM users where user_id=$id";
 
         if(mysqli_query($link, $sql)) {
+            // if executed successfully refresh
             echo "<meta http-equiv='refresh' content='0'>";
-    //        echo "$alias deleted successfully.";
         } else {
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
         }

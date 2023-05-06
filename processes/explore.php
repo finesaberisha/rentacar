@@ -1,15 +1,18 @@
 <?php
+
+// connecting to our database
 $link = mysqli_connect("localhost", "root", "", "rentacar");
-// Check connection
+// Check connection, if false we stop the proccess and print the error message
 if($link === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
-// Attempt select query execution
+// Retrieving cars that are available at that location and between the selected dates by the user
 if (isset($location) && isset($start_date) && isset($end_date)) {
   $sql = "SELECT v.* FROM vehicles v
   LEFT JOIN bookings b ON v.vehicle_id = b.vehicle_id
   WHERE v.location = '$location' AND (b.booking_id IS NULL OR b.end_date < '$start_date' OR b.start_date > '$end_date')";
 }
+// if user didn't fill the search fields, retrieve all the cars
 else {
   $sql = "SELECT * FROM vehicles";
 }
@@ -27,7 +30,7 @@ if($result = mysqli_query($link, $sql)) {
             $transmission = $row['transmission'];
             $location = $row['location'];
 
-            
+            // calling our function with needed parameters that renders our data in HTML
             carRender($id, $name, $year, $image_url, $price, $type, $engine, $transmission, $location);
         }
     } else {
@@ -39,7 +42,7 @@ if($result = mysqli_query($link, $sql)) {
 // Close connection
 mysqli_close($link);
 
-
+// including our JS script
 echo '<script src="./assets/js/script.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>';

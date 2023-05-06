@@ -92,6 +92,7 @@
 
 
     <?php
+    // only going through if location, type, brand, model, engine, transmission, year and price are submitted
     if (isset($_POST["location"]) && isset($_POST["type"]) && isset($_POST["brand"]) && isset($_POST["model"]) && isset($_POST["engine"]) && isset($_POST["transmission"]) && isset($_POST["year"]) && isset($_POST["price"])) {
         $location=$_POST["location"];
         $id=$_POST["id"];
@@ -106,8 +107,7 @@
         $filename = $image['name'];
         $targetDir = 'uploads/';
         $imageUrl = '';
-        /* Attempt MySQL server connection. Assuming you are running MySQL
-        server with default setting (user 'root' with no password) */
+        // connecting to our database
         $link = mysqli_connect("localhost", "root", "", "rentacar");
         // Check connection
         if($link === false) {
@@ -131,9 +131,9 @@
         //otherwise we insert a new row
         else {
             $sql = "INSERT INTO vehicles(location, type, brand, model, engine, transmission, year, price_per_day, image_url) VALUES ('$location', '$type', '$brand', '$model', '$engine', '$transmission', $year, $price, '$imageUrl')";
-           // echo "<script>alert('passed')</script>";
         }
         
+        // if query is executed successfully refresh the page
         if(mysqli_query($link, $sql)) {
             echo "<meta http-equiv='refresh' content='0'>";
          //   echo "Records inserted successfully.";

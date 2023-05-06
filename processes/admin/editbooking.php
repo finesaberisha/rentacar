@@ -57,29 +57,26 @@
 
 
     <?php
+    // only going through if start_date, end_date and price are submitted
     if (isset($_POST["start_date"]) && isset($_POST["end_date"]) && isset($_POST["price"])) {
         $id=$_POST["booking_id"];
         $start_date=$_POST["start_date"];
         $end_date=$_POST["end_date"];
         $price = $_POST["price"];
 
-        /* Attempt MySQL server connection. Assuming you are running MySQL
-        server with default setting (user 'root' with no password) */
+        // connecting to our database
         $link = mysqli_connect("localhost", "root", "", "rentacar");
         // Check connection
         if($link === false) {
             die("ERROR: Could not connect. " . mysqli_connect_error());
         }
-        if (move_uploaded_file($image['tmp_name'], $targetDir . $filename)) {
-            // Image uploaded successfully, save the URL in the database
-            $imageUrl = $targetDir . $filename;
-        }
 
-
+        // update the selected booking with the new data
         $sql = "Update bookings set start_date='$start_date', end_date='$end_date', total_price=$price where booking_id=$id";
 
         
         if(mysqli_query($link, $sql)) {
+            // if executed successfully refresh the page
             echo "<meta http-equiv='refresh' content='0'>";
          //   echo "Records inserted successfully.";
         } else {

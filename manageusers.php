@@ -17,20 +17,25 @@
 </head>
 
 <body>
+    <!-- header -->
   <?php
   require 'header.php';
   ?>
     
     <?php
-    session_start();
+    session_start(); //starting the session
+
+    // if the role of the user logged in is not staff redirect to the user panel
     if(isset($_SESSION['username']) && $_SESSION['role'] != 'staff') {
         header("Location: ./user.php");
         die();
     }
+    // if user is not logged in and tries to access manage users page, it redirects to the login page
     if(!isset($_SESSION['username'])) {
         header("Location: ./register.php");
         die();
     }
+    // if button logout is clicked, session is destroyed and it redirects to the login page
     if(isset($_POST['logout'])) {
         session_destroy();
         header("Location: ./register.php");
@@ -51,12 +56,14 @@
     <div class="admin-main">
     <h2> Users: </h2>
 
+    <!-- a dialog that is shown when delete is clicked -->
     <dialog id="deleteUser">
     <?php 
        include("./processes/admin/deleteuser.php");
     ?>
     </dialog>
 
+    <!-- the table that displays all users  -->
     <?php 
         include("./processes/admin/allusers.php");
     ?>
@@ -66,10 +73,12 @@
       </section>
   </main>
   
+  <!-- footer -->
   <?php
   require 'footer.php';
   ?>
   
+  <!-- our JS script -->
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

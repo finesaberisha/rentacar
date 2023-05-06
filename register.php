@@ -7,6 +7,8 @@
 <body>
 <?php
     session_start();
+
+    // if an already logged in user tries to access login page send them to user panel if they are a user, or to admin panel if they are staff
     if(isset($_SESSION['username'])) {
       if($_SESSION['role'] != 'staff') {
         header("Location: ./user.php");

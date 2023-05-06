@@ -16,16 +16,17 @@
     </form>
 
     <?php
+    // only going through if idToDelete is submitted
     if(isset($_POST["idToDelete"])){
         $id=$_POST["idToDelete"];
-        /* Attempt MySQL server connection. Assuming you are running MySQL
-        server with default setting (user 'root' with no password) */
+        
+        // connecting to our database
         $link = mysqli_connect("localhost", "root", "", "rentacar");
         // Check connection
         if($link === false) {
             die("ERROR: Could not connect. " . mysqli_connect_error());
         }
-        // Attempt insert query execution
+        // deleting the booking with id that is submitted
         $sql = "DELETE FROM bookings where booking_id=$id";
         if(mysqli_query($link, $sql)) {
             echo "<meta http-equiv='refresh' content='0'>";
