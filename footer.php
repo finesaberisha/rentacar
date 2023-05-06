@@ -1,10 +1,11 @@
 <html>
 <body>
+<!-- Footer section starts here -->
 <footer class="footer">
     <div class="container">
-
+      <!-- Footer top section starts here -->
       <div class="footer-top">
-
+        <!-- Footer brand section starts here -->
         <div class="footer-brand">
           <a href="index.php" class="logo">
             <img class="header-logo" src="./assets/images/RIT_Kosovo_PNG.png" alt="RITK logo">
@@ -14,9 +15,11 @@
           <p class="footer-text">
             We are dedicated to providing exceptional service and affordable prices for our customers. Whether you're traveling for business or pleasure, we have a wide range of vehicles to suit your needs.           </p>
         </div>
+        <!-- Footer brand section ends here -->
 
+        <!-- Footer list section starts here -->
         <ul class="footer-list">
-
+          <!-- Footer list item section starts here -->
           <li>
             <p class="footer-list-title">Pages</p>
           </li>
@@ -36,11 +39,13 @@
           <li>
             <a href="services.php" class="footer-link">Services</a>
           </li>
-
+          <!-- Footer list item section ends here -->
         </ul>
+        <!-- Footer list section ends here -->
 
+        <!-- Footer list section starts here -->
         <ul class="footer-list">
-
+         <!-- Footer list item section starts here -->
           <li>
             <p class="footer-list-title">Support</p>
           </li>
@@ -52,11 +57,13 @@
           <li>
             <a href="terms.php" class="footer-link">Terms & conditions</a>
           </li>
-
+        <!-- Footer list item section ends here -->
         </ul>
+        <!-- Footer list section ends here -->
 
+        <!-- Footer list section starts here -->
         <ul class="footer-list">
-
+        <!-- Footer list item section starts here -->
           <li>
             <p class="footer-list-title">Places we offer our service</p>
           </li>
@@ -85,13 +92,13 @@
           <li>
             <a class="footer-link">Ferizaj</a>
           </li>
-
+        <!-- Footer list item section ends here -->
         </ul>
-
+        <!-- Footer top section ends here -->
       </div>
-
+      <!-- Footer bottom section starts here -->
       <div class="footer-bottom">
-
+      <!-- Social list section starts here -->
         <ul class="social-list">
 
           <li>

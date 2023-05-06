@@ -15,7 +15,7 @@
           <ul class="featured-car-list">
 
           <?php 
-          // if search
+          // Check if search criteria are set
           session_start();
           if (isset($_POST["location"]) && isset($_POST["start_date"]) && isset($_POST["end_date"])) {
             $location = $_POST["location"];
@@ -29,7 +29,7 @@
             $jsonResult = json_encode($result); //converting the array to json format
             echo "<script>var bookData = " . $jsonResult . ";</script>"; //storing that array in json format in a javascript variable
           }
-          include("./processes/explore.php");
+          include("./processes/explore.php");// Includes the PHP code to generate the list of cars
           ?>
 
           </ul>
@@ -40,7 +40,7 @@
 
 <dialog id="addToBookingsDialog">
     <?php 
-       include("./processes/book.php");
+       include("./processes/book.php"); //Includes the PHP code to add a booking to the database
     ?>
 </dialog>
  

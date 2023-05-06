@@ -15,7 +15,7 @@
 
       <section class="section hero" id="home">
         <div class="container">
-
+<!-- Hero content, including title and description -->
           <div class="hero-content">
             <h2 class="h1 hero-title">Discover the Freedom of the Open Roads</h2>
 
@@ -25,9 +25,9 @@
           </div>
 
           <div class="header-photo"></div>
-
+<!-- Search form for selecting a location, start date, and end date -->
           <form action="./explore.php" method="POST" class="hero-form">
-
+<!-- Location dropdown -->
           <div class="input-wrapper">
           <label for="input-1" class="input-label">Location</label>
           <select name="location" id="input-1" class="input-field-select">
@@ -41,19 +41,19 @@
           </select>
           </div>
 
-
+<!-- Start date input -->
             <div class="input-wrapper">
               <label for="input-2" class="input-label">Pick-up Date</label>
 
               <input type="date" name="start_date" id="input-2" class="input-field">
             </div>
-
+<!-- End date input -->
             <div class="input-wrapper">
               <label for="input-3" class="input-label">Return Date</label>
 
               <input type="date" name="end_date" id="input-3" class="input-field">
             </div>
-
+<!-- Search button -->
             <button type="submit" class="btn">Search</button>
 
           </form>
@@ -66,12 +66,12 @@
 
 
       <!-- 
-        - #FEATURED CAR
+        - #FEATURED CAR;Section showing featured cars
       -->
 
       <section class="section featured-car" id="featured-car">
         <div class="container">
-
+<!-- Title and link to view more cars -->
           <div class="title-wrapper">
             <h2 class="h2 section-title">Featured cars</h2>
 
@@ -81,7 +81,7 @@
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </a>
           </div>
-
+<!-- List of featured cars -->
           <ul class="featured-car-list">
 
             <?php
@@ -98,12 +98,11 @@
 
 
       <!-- 
-        - #GET START
-      -->
+        - #GET START: Section showing steps to get started with renting a car -->
 
       <section class="section get-start">
         <div class="container">
-
+<!-- Title and list of steps -->
           <h2 class="h2 section-title">Get started with 4 simple steps</h2>
 
           <ul class="get-start-list">

@@ -2,6 +2,7 @@
 <head>
 <body> 
 <?php
+// Import the header.php file which contains the header code
 require 'header.php';
 ?>
 <main class="explore-cars-page">
@@ -31,11 +32,14 @@ require 'header.php';
 </main>
 
 <?php
+// Import the footer.php file which contains the footer code
   require 'footer.php';
   ?>
-
+<!-- This script tag links to the script.js file -->
   <script src="./assets/js/script.js"></script>
+<!-- This script tag imports the ionicons library -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<!-- This script tag imports the ionicons library, for browsers that don't support ES modules -->
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>

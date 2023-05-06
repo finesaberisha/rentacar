@@ -11,7 +11,7 @@ require 'header.php';
             <h2 class="h2 section-title">Frequently Asked Questions</h2>
 
           </div>
-
+          <!-- Created a list of frequently asked questions and their answers -->
           <ul>
             <div>
             <h3 class="h3 section-title">How old do I have to be to rent a car?</h3>

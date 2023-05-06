@@ -19,23 +19,24 @@
 
       <div class="overlay" data-overlay></div>
 
-      <a href="index.php" class="logo">
-        <img class="header-logo" src="./assets/images/RIT_Kosovo_PNG.png" alt="RITK logo">
+      <a href="index.php" class="logo"><!-- Creates a link to the homepage and a logo container -->
+        <img class="header-logo" src="./assets/images/RIT_Kosovo_PNG.png" alt="RITK logo"> <!-- Displays the logo image and provides an alternate text description -->
       </a>
 
-      <nav class="navbar" data-navbar>
+      <nav class="navbar" data-navbar><!-- Creates a navigation menu with custom data attribute -->
         <ul class="navbar-list">
 
           <li>
-            <a href="index.php" class="navbar-link" data-nav-link>Home</a>
+            <a href="index.php" class="navbar-link" data-nav-link>Home</a><!-- Creates a link to the homepage with custom data attribute -->
           </li>
 
           <li>
-            <a href="about.php" class="navbar-link" data-nav-link>About us</a>
+            <a href="about.php" class="navbar-link" data-nav-link>About us</a><!-- Creates a link to the about page with custom data attribute -->
+          </li>
           </li>
 
           <li>
-            <a href="services.php" class="navbar-link" data-nav-link>Services</a>
+            <a href="services.php" class="navbar-link" data-nav-link>Services</a><!-- Creates a link to the services page with custom data attribute -->
           </li>
 
         </ul>
@@ -43,13 +44,13 @@
 
       <div class="header-actions">
 
-        <a href="explore.php" class="btn" aria-labelledby="aria-label-txt">
+        <a href="explore.php" class="btn" aria-labelledby="aria-label-txt"><!-- Creates a button to explore cars with an ARIA label -->
           <i class="fa fa-car"></i>
 
           <span id="aria-label-txt">Explore cars</span>
         </a>
 
-        <a href="register.php" class="btn user-btn" aria-label="Profile">
+        <a href="register.php" class="btn user-btn" aria-label="Profile"><!-- Creates a button to access the user profile with an ARIA label -->
           <i class="fa fa-user"></i>
         </a>
 
