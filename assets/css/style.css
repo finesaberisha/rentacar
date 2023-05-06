@@ -1494,6 +1494,14 @@ th {padding-top: 12px; padding-bottom: 12px; text-align: left; background-color:
   transform: translate(-50%, -50%);
 }
 
+#deleteUser {
+  width: 280px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .input-field-select{
   position: relative;
     background: var(--background, var(--alice-blue));

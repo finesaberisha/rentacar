@@ -12,7 +12,6 @@ if($link === false) {
 $sql = "SELECT * from users";
 if($result = mysqli_query($link, $sql)) {
     if(mysqli_num_rows($result) > 0) {
-        $resultArray = array(); //an additional array where we store all rows so we can pass it to the javascript
         echo "<table>";
         echo "<tr><th>User_id</th><th>Username</th><th>Email</th><th>Role</th><th style='text-align: center;'>#</th></tr>";
         while($row = mysqli_fetch_array($result)) {
@@ -22,11 +21,9 @@ if($result = mysqli_query($link, $sql)) {
             echo "<td>" . $row['username'] . "</td>";
             echo "<td>" . $row['email'] . "</td>";
             echo "<td>" . $row['role'] . "</td>";
-            echo "<td><button onclick='showDeleteDialogForUsers(\"" . $row['booking_id'] . "\")'>delete</button></td>";
+            echo "<td><button style='color: red;' onclick='showDeleteDialogForUsers(\"" . $row['user_id'] . "\")'>Delete</button></td>";
             echo "</tr>";
         }
-        $jsonResult = json_encode($resultArray); //converting the array to json format
-        echo "<script>var manageUsersResult = " . $jsonResult . ";</script>"; //storing that array in json format in a javascript variable
         echo "</table>";
     } else {
         echo "No records were found.";

@@ -23,7 +23,7 @@ if($result = mysqli_query($link, $sql)) {
             echo "<td>" . $row['model'] . "</td>";
             echo "<td>" . $row['year'] . "</td>";
             echo "<td>" . $row['price_per_day'] . "</td>";
-            echo "<td><button onclick='showDialogForEdit(\"" . $row['vehicle_id'] . "\")'>Edit</button><button onclick='showDialogForDelete(\"" . $row['vehicle_id'] . "\")'>delete</button></td>";
+            echo "<td><button style='color: darkgreen;' onclick='showDialogForEdit(\"" . $row['vehicle_id'] . "\")'>Edit</button><button style='color: red;' onclick='showDialogForDelete(\"" . $row['vehicle_id'] . "\")'>Delete</button></td>";
             echo "</tr>";
         }
         $jsonResult = json_encode($resultArray); //converting the array to json format

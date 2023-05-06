@@ -49,7 +49,7 @@
 
     <a href="./admin.php">← Go back</a>
     <div class="admin-main">
-    <button onClick="showDialogForInsert()" style="float: right;">+ Add new</button>
+    <button onClick="showDialogForInsert()" style="float: right; font-weight: bold; color: green;">+ Add new</button>
     <h2> Vehicles: </h2>
 
     <dialog id="newCar">

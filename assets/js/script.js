@@ -51,7 +51,7 @@ function validateForm() {
 //admin panel
 //manage cars
 function showDialogForInsert() {
- // document.getElementById("formAdd").reset(); //clear input fields 
+  document.getElementById("formAdd").reset(); //clear input fields 
   newCar.showModal(); //show the dialog
 }
 
@@ -83,6 +83,7 @@ function showDialogForEdit(id) {
 
 //make a booking
 function addToBookings(id, price) {
+  //show dialog
   addToBookingsDialog.showModal();
 
   //input fields
@@ -106,6 +107,7 @@ function addToBookings(id, price) {
 }
 //manage bookings
 function showEditDialogForBookings(id) {
+  //show edit dialog
   editBooking.showModal();
   
   var selectedBooking = manageBookingData.find(x=>x.booking_id == id); 
@@ -122,12 +124,15 @@ function showEditDialogForBookings(id) {
 
 }
 function showDeleteDialogForBookings(id) {
+  //show delete dialog
   deleteBooking.showModal();
   var textId = document.querySelector('input[name="idToDelete"]');
   textId.value = id;
 }
+
 function showDeleteDialogForUsers(id) {
-  deleteUsers.showModal();
-  var textId = document.querySelector('input[name="idToDelete"]');
-  textId.value = id;
+  //show delete dialog
+  deleteUser.showModal();
+  var textUserId = document.querySelector('input[name="UseridToDelete"]');
+  textUserId.value = id;
 }

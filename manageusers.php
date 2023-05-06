@@ -51,6 +51,11 @@
     <div class="admin-main">
     <h2> Users: </h2>
 
+    <dialog id="deleteUser">
+    <?php 
+       include("./processes/admin/deleteuser.php");
+    ?>
+    </dialog>
 
     <?php 
         include("./processes/admin/allusers.php");
