@@ -1426,7 +1426,6 @@ form .btn input[type="submit"]{
 }
 
 .admin-main {
-  width: 800px;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
@@ -1544,4 +1543,56 @@ form .btn {
   position: relative;
   overflow: hidden;
   width: 100px;
+}
+.manage {
+  list-style-type: none;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manage i {
+  font-size: 1.2em;
+  margin-right: 10px;
+  color: var(--carolina-blue);
+}
+
+.manage a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.manage a:hover {
+  text-decoration: underline;
+}
+
+.flexed{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.flexed .manage {
+  width: calc(33.33% - 10px);
+}
+
+@media screen and (max-width: 768px) {
+  .flexed .manage {
+    width: calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .flexed .manage {
+    width: 100%;
+    margin-bottom: 5px;
+  }
 }
