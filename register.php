@@ -18,7 +18,6 @@
       }
         
     }
-    
     ?>
   <div class="register-page">
     <div class="wrapper">
@@ -41,7 +40,7 @@
         <div class="form-inner">
           <form action="./processes/authentication.php" method="POST" class="login">
             <div class="field">
-              <input type="text" name="username" placeholder="Email Address" required>
+              <input type="text" name="username" placeholder="Username" required>
             </div>
             <div class="field">
               <input type="password" name="password" placeholder="Password" required>
@@ -59,7 +58,10 @@
           </form>
           <form action="./processes/register.php" method="POST" class="signup" onsubmit="return validateForm()">
             <div class="field">
-              <input type="text" name="username" placeholder="Email Address" required>
+              <input type="text" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="field">
+              <input type="text" name="username" placeholder="Username" required>
             </div>
             <div class="field">
               <input type="password" id="password" name="password" placeholder="Password" required>

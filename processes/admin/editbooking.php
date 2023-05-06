@@ -41,43 +41,28 @@
 <body>
     <form id="formAdd" method="POST" action="" enctype="multipart/form-data">
     
-        <input type="hidden" name="id" value="0" required>
+        <input type="hidden" name="booking_id" value="0" required>
 
-        <label for="type">Type:</label>
-        <input type="text" name="type" required>
+        <label for="start_date">Pick-up Date:</label>
+        <input type="date" name="start_date" required>
 
-        <label for="brand">Brand:</label>
-        <input type="text" name="brand" required>
+        <label for="end_date">Return Date:</label>
+        <input type="date" name="end_date" required>
 
-        <label for="model">Model:</label>
-        <input type="text" name="model" required>
-
-        <label for="year">Year:</label>
-        <input type="number" name="year" required>
-
-        <label for="price">Price per day:</label>
+        <label for="price">Total Price:</label>
         <input type="number" step="any" name="price" required>
-
-        <label for="image">Image:</label>
-        <input type="file" name="image">
 
         <input type="submit" value="Submit">
     </form>
 
 
     <?php
-    if (isset($_POST["type"]) && isset($_POST["brand"]) && isset($_POST["model"]) && isset($_POST["year"]) && isset($_POST["price"])) {
-        $id=$_POST["id"];
-        $type=$_POST["type"];
-        $brand=$_POST["brand"];
-        $model=$_POST["model"];
-        $year=$_POST["year"];
-        $price=$_POST["price"];
-        $image = $_FILES['image'];
+    if (isset($_POST["start_date"]) && isset($_POST["end_date"]) && isset($_POST["price"])) {
+        $id=$_POST["booking_id"];
+        $start_date=$_POST["start_date"];
+        $end_date=$_POST["end_date"];
+        $price = $_POST["price"];
 
-        $filename = $image['name'];
-        $targetDir = 'uploads/';
-        $imageUrl = '';
         /* Attempt MySQL server connection. Assuming you are running MySQL
         server with default setting (user 'root' with no password) */
         $link = mysqli_connect("localhost", "root", "", "rentacar");
@@ -90,21 +75,9 @@
             $imageUrl = $targetDir . $filename;
         }
 
-        //if id is greater than 0 it means we are updating an existing row
-        if ($id > 0) {
-            if ($imageUrl == '') {
-                $sql = "Update vehicles set type='$type', brand='$brand', model='$model', year=$year, price_per_day=$price where vehicle_id=$id";
-            }
-            else {
 
-                $sql = "Update vehicles set type='$type', brand='$brand', model='$model', year=$year, price_per_day=$price, image_url='$imageUrl' where vehicle_id=$id";
-            }
-        }
-        //otherwise we insert a new row
-        else {
-            $sql = "INSERT INTO vehicles(type, brand,model, year, price_per_day, image_url) VALUES ('$type', '$brand', '$model', $year, $price, '$imageUrl')";
-           // echo "<script>alert('passed')</script>";
-        }
+        $sql = "Update bookings set start_date='$start_date', end_date='$end_date', total_price=$price where booking_id=$id";
+
         
         if(mysqli_query($link, $sql)) {
          //   echo "Records inserted successfully.";

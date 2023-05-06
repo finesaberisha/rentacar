@@ -19,9 +19,11 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
         $row = mysqli_fetch_assoc($result);
         $hashedPassword = $row["password"];
         $role = $row["role"];
+        $user_id = $row["user_id"];
 
         if (password_verify($password, $hashedPassword)) {
             // Password matches, login successful
+            $_SESSION["user_id"] = $user_id;
             $_SESSION["username"] = $username;
             $_SESSION["role"] = $role;
             if ($role == 'staff') {

@@ -19,14 +19,15 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     
     $username = $conn->real_escape_string($_POST['username']);
     $password = $conn->real_escape_string($_POST['password']);
-
+    $email = $conn->real_escape_string($_POST['email']);
     // Hash the password
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert the user into the database
-    $query = "INSERT INTO users (username, password, role) VALUES ('$username', '$hashedPassword', 'customer')";
+    $query = "INSERT INTO users (username, email, password, role) VALUES ('$username', '$email', '$hashedPassword', 'customer')";
     if ($conn->query($query) === TRUE) {
-        echo "User created successfully!";
+        header("Location: ../register.php");
+        die();
     } else {
         echo "Error creating user: " . $conn->error;
     }

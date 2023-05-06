@@ -1439,6 +1439,16 @@ form .btn input[type="submit"]{
   display: inline;
 }
 
+.user-main {
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
 table {border-collapse: collapse; width: 100%; margin:auto;}
 td, th { border: 1px solid #ddd; padding: 8px;}
 tr:nth-child(even) {background-color: #f2f2f2;}
@@ -1447,6 +1457,22 @@ th {padding-top: 12px; padding-bottom: 12px; text-align: left; background-color:
 
 #newCar {
   height: 480px;
+  width: 280px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#deleteCar {
+  width: 280px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#addToBookingsDialog {
   width: 280px;
   position: fixed;
   top: 50%;
@@ -1496,4 +1522,11 @@ th {padding-top: 12px; padding-bottom: 12px; text-align: left; background-color:
   .register-page {
     padding: 25% 5% 10% 5%;
   }
+}
+
+form .btn {
+  float: right;
+  position: relative;
+  overflow: hidden;
+  width: 100px;
 }

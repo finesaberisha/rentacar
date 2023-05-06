@@ -48,8 +48,8 @@ function validateForm() {
 }
 
 
-//admin
-
+//admin panel
+//manage cars
 function showDialogForInsert() {
  // document.getElementById("formAdd").reset(); //clear input fields 
   newCar.showModal(); //show the dialog
@@ -78,5 +78,46 @@ function showDialogForEdit(id) {
   textModel.value = selectedCar.model;
   textYear.value = selectedCar.year;
   textPrice.value = selectedCar.price_per_day;
+
+}
+
+//make a booking
+function addToBookings(id, price) {
+  addToBookingsDialog.showModal();
+
+  //input fields
+  var vehicle_id = document.querySelector('input[name="vehicle_id"]');
+  var start_date = document.querySelector('input[name="start_date"]');
+  var end_date = document.querySelector('input[name="end_date"]');
+  var priceTxt = document.querySelector('input[name="price"]');
+
+  //calculate days between dates
+  const date1 = new Date(bookData[1]);
+  const date2 = new Date(bookData[2]);
+  const timeDiff = Math.abs(date2.getTime() - date1.getTime());
+  const diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+  //set the values of already selected dates and calculate the price for how many days
+  vehicle_id.value = id;
+  start_date.value = bookData[1];
+  end_date.value = bookData[2];
+  priceTxt.value = price * diffDays;
+
+}
+//manage bookings
+function showEditDialogForBookings(id) {
+  editBooking.showModal();
+  
+  var selectedBooking = manageBookingData.find(x=>x.booking_id == id); 
+  var manageId = document.querySelector('input[name="booking_id"]');
+  var manageStartDate = document.querySelector('input[name="start_date"]');
+  var manageEndDate = document.querySelector('input[name="end_date"]');
+  var manageTotalPrice = document.querySelector('input[name="price"]');
+
+  //set the values of already selected dates and calculate the price for how many days
+  manageId.value = id;
+  manageStartDate.value = selectedBooking.start_date;
+  manageEndDate.value = selectedBooking.end_date;
+  manageTotalPrice.value = selectedBooking.total_price;
 
 }

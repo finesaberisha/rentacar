@@ -40,36 +40,38 @@
 
     
 
-    
 
-    <main class="explore-cars-page">
+<main class="explore-cars-page">
     <section class="section featured-car" id="featured-car">
         <div class="container">
 
-        <form method="POST" action="">
-        <input type="hidden" name="logout">
-        <input type="submit" class="btn" value="Logout">
-        </form>
-        <div class="title-wrapper">
-            <h2 class="h2 section-title">Admin Panel</h2>
 
-          </div>
-        <div class="admin-main">
-         
 
-          <div>
-            <ul>
-            <li><a href="./managecars.php">Manage Cars</a></li>
-            <li><a href="./managebookings.php">Manage Bookings</a></li>
-            <li><a href="./manageusers.php">Manage Users</a></li>
-            </ul>
-          </div>
+    <a href="./admin.php">← Go back</a>
+    <div class="admin-main">
+    <button onClick="showDialogForInsert()" style="float: right;">+ Add new</button>
+    <h2> Vehicles: </h2>
 
-        </div>
+    <dialog id="newCar">
+    <?php 
+       include("./processes/admin/addcar.php");
+    ?>
+    </dialog>
+
+    <dialog id="deleteCar">
+    <?php 
+       include("./processes/admin/deletecar.php");
+    ?>
+    </dialog>
+
+    <?php 
+        include("./processes/admin/allcars.php");
+    ?>
+    </div>
+
     </div>
       </section>
   </main>
-    
   
   <?php
   require 'footer.php';

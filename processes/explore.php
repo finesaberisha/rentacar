@@ -5,17 +5,27 @@ if($link === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 // Attempt select query execution
-$sql = "SELECT * FROM vehicles";
+if (isset($location) && isset($start_date) && isset($end_date)) {
+  $sql = "SELECT v.* FROM vehicles v
+  LEFT JOIN bookings b ON v.vehicle_id = b.vehicle_id
+  WHERE v.location = '$location' AND (b.booking_id IS NULL OR b.end_date < '$start_date' OR b.start_date > '$end_date')";
+}
+else {
+  $sql = "SELECT * FROM vehicles";
+}
+
 if($result = mysqli_query($link, $sql)) {
     if(mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_array($result)) {
+            $id = $row['vehicle_id'];
             $name = $row['brand'].' '.$row['model'];
             $year = $row['year'];
             $image_url = $row['image_url'];
             $price = $row['price_per_day'];
-            $type= $row['type'];
+            $type = $row['type'];
+
             
-            carRender($name, $year, $image_url, $price,$type);
+            carRender($id, $name, $year, $image_url, $price, $type);
         }
     } else {
         echo "No records matching your query were found.";
@@ -30,7 +40,7 @@ mysqli_close($link);
 
 
 
-function carRender($car_name, $year, $image_url, $price, $type)
+function carRender($id, $car_name, $year, $image_url, $price, $type)
 {
     echo '<li>
         <div class="featured-car-card">
@@ -80,14 +90,10 @@ function carRender($car_name, $year, $image_url, $price, $type)
             <div class="card-price-wrapper">
 
               <p class="card-price">
-                <strong>'.$price.'</strong> / month
+                <strong>'.$price.'</strong> / day
               </p>
 
-              <button class="btn fav-btn" aria-label="Add to favourite list">
-                <ion-icon name="heart-outline"></ion-icon>
-              </button>
-
-              <button class="btn">Rent now</button>
+              <button class="btn" onClick="addToBookings('.$id.','.$price.')">Rent now</button>
 
             </div>
 

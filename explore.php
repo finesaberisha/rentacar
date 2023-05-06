@@ -15,7 +15,18 @@
           <ul class="featured-car-list">
 
           <?php 
-          include("./processes/allcars.php");
+          // if search
+          session_start();
+          if (isset($_POST["location"]) && isset($_POST["start_date"]) && isset($_POST["end_date"])) {
+            $location = $_POST["location"];
+            $start_date = $_POST["start_date"];
+            $end_date = $_POST["end_date"];
+
+            $result = array($location, $start_date, $end_date);
+            $jsonResult = json_encode($result); //converting the array to json format
+            echo "<script>var bookData = " . $jsonResult . ";</script>"; //storing that array in json format in a javascript variable
+          }
+          include("./processes/explore.php");
           ?>
 
           </ul>
@@ -23,6 +34,12 @@
         </div>
       </section>
 </main>
+
+<dialog id="addToBookingsDialog">
+    <?php 
+       include("./processes/book.php");
+    ?>
+</dialog>
  
 <?php
   require 'footer.php';
