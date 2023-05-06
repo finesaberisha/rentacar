@@ -87,7 +87,7 @@
     const loginBtn = document.querySelector("label.login");
     const signupBtn = document.querySelector("label.signup");
     const signupLink = document.querySelector("form .signup-link a");
-    // When the signup button is clicked, move the form to the left to reveal the signup form
+   // When the signup button is clicked, move the form to the left to reveal the signup form
     signupBtn.onclick = (() => {
       loginForm.style.marginLeft = "-50%";
       loginText.style.marginLeft = "-50%";
